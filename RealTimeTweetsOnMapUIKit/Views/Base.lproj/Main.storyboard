@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="RealTimeTweetsOnMapUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQa-L2-Jl5">
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AKV-0b-bV8">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWU-O9-UVe">
+                                        <rect key="frame" x="290" y="0.0" width="84" height="34"/>
+                                        <state key="normal" title="Search"/>
+                                        <connections>
+                                            <action selector="applyRule:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvU-tN-8Ez"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin Life Time?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ld-d3-OKa">
+                                <rect key="frame" x="20" y="106" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DSD-zd-d8q">
+                                <rect key="frame" x="20" y="134.5" width="374" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uT2-o4-d9L">
+                                <rect key="frame" x="0.0" y="173.5" width="414" height="688.5"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uT2-o4-d9L" secondAttribute="trailing" id="4c0-zh-4XH"/>
+                            <constraint firstItem="uT2-o4-d9L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BTw-bS-8bH"/>
+                            <constraint firstItem="SQa-L2-Jl5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="E1D-Wo-78L"/>
+                            <constraint firstItem="5ld-d3-OKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GZs-L5-4xR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SQa-L2-Jl5" secondAttribute="trailing" constant="20" id="JU8-9Y-1RG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uT2-o4-d9L" secondAttribute="bottom" id="JpH-DR-ZCo"/>
+                            <constraint firstItem="SQa-L2-Jl5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PGp-qT-zPI"/>
+                            <constraint firstItem="DSD-zd-d8q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RLn-At-A6k"/>
+                            <constraint firstItem="AKV-0b-bV8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="VGJ-ma-LB2"/>
+                            <constraint firstItem="5ld-d3-OKa" firstAttribute="top" secondItem="SQa-L2-Jl5" secondAttribute="bottom" constant="8" id="axw-ek-QKw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ld-d3-OKa" secondAttribute="trailing" constant="20" id="gjd-Ai-AUU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DSD-zd-d8q" secondAttribute="trailing" constant="20" id="kkR-1N-WfL"/>
+                            <constraint firstItem="DSD-zd-d8q" firstAttribute="top" secondItem="5ld-d3-OKa" secondAttribute="bottom" constant="8" id="oZ0-h4-qXw"/>
+                            <constraint firstItem="uT2-o4-d9L" firstAttribute="top" secondItem="DSD-zd-d8q" secondAttribute="bottom" constant="8" id="rvk-zy-kNI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="uT2-o4-d9L" id="Tce-su-HrK"/>
+                        <outlet property="searchBar" destination="AKV-0b-bV8" id="ZRf-yQ-Y3q"/>
+                        <outlet property="searchButton" destination="HWU-O9-UVe" id="uBh-X5-D3b"/>
+                        <outlet property="segmentedControl" destination="DSD-zd-d8q" id="kF5-hX-23M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-445" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

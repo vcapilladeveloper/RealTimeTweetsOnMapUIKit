@@ -16,15 +16,19 @@ class GeoEndpointTest: XCTestCase {
         try super.setUpWithError()
         sut = GeoEndpoint("1234")
     }
-    
+
     func test_geo_endpoint_constructor_with_placeID() {
         XCTAssertEqual(sut.baseURLString, "https://api.twitter.com")
         XCTAssertEqual(sut.method, .get)
         XCTAssertNotNil(sut.headers)
     }
-    
+
     func test_geo_endpoint_full_constructor() {
-        sut = GeoEndpoint(baseURLString: "", path: "/1.1/geo/id/", method: .post, paramEncoding: .JSONEncoding, showDebugInfo: true)
+        sut = GeoEndpoint(baseURLString: "",
+                          path: "/1.1/geo/id/",
+                          method: .post,
+                          paramEncoding: .JSONEncoding,
+                          showDebugInfo: true)
         XCTAssertEqual(sut.baseURLString, "")
         XCTAssertEqual(sut.path, "/1.1/geo/id/")
         XCTAssertEqual(sut.method, .post)

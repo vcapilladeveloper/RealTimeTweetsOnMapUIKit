@@ -5,7 +5,6 @@
 //  Created by Victor Capilla Developer on 27/8/21.
 //
 
-
 import XCTest
 @testable import RealTimeTweetsOnMapUIKit
 

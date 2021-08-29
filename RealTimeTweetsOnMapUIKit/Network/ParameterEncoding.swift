@@ -9,9 +9,9 @@ import Foundation
 
 /// Supported parameter encoding methods
 public enum ParameterEncoding {
-    
+
     case URLEncoding
     case JSONEncoding
     case noEncoding
-    
+
 }

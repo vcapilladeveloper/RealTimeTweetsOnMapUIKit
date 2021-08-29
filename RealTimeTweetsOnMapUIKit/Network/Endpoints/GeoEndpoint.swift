@@ -8,19 +8,25 @@
 import Foundation
 
 struct GeoEndpoint: Endpoint {
-    
-    typealias T = GeoModel
-    
+
+    typealias ReturnType = GeoModel
+
     var baseURLString: String
     var path: String
     var method: HttpMethod
     var headers: HttpHeaders?
-    var parameters: [String : Any]?
+    var parameters: [String: Any]?
     var body: Data?
     var paramEncoding: ParameterEncoding?
     var showDebugInfo: Bool
-    
-    init(baseURLString: String, path: String, method: HttpMethod, headers: HttpHeaders? = nil, parameters: [String : Any]? = nil, body: Data? = nil, paramEncoding: ParameterEncoding? = nil, showDebugInfo: Bool) {
+
+    init(baseURLString: String, path: String,
+         method: HttpMethod,
+         headers: HttpHeaders? = nil,
+         parameters: [String: Any]? = nil,
+         body: Data? = nil,
+         paramEncoding: ParameterEncoding? = nil,
+         showDebugInfo: Bool) {
         self.baseURLString = baseURLString
         self.path = path
         self.method = method
@@ -30,9 +36,13 @@ struct GeoEndpoint: Endpoint {
         self.paramEncoding = paramEncoding
         self.showDebugInfo = showDebugInfo
     }
-    
+
     init(_ placeId: String) {
-        self.init(baseURLString: ConfigUtils.getConfiguration(with: "BASE_URL") ?? "", path: "/1.1/geo/id/\(placeId).json", method: .get, paramEncoding: .JSONEncoding, showDebugInfo: true)
+        self.init(baseURLString: ConfigUtils.getConfiguration(with: "BASE_URL") ?? "",
+                  path: "/1.1/geo/id/\(placeId).json",
+                  method: .get,
+                  paramEncoding: .JSONEncoding,
+                  showDebugInfo: true)
         if let bearer = ConfigUtils.getConfiguration(with: "TWITTER_BEARER") {
             if headers != nil {
                 self.headers?.add(name: "Authorization", value: "Bearer \(bearer)")
@@ -41,5 +51,5 @@ struct GeoEndpoint: Endpoint {
             }
         }
     }
-    
+
 }
