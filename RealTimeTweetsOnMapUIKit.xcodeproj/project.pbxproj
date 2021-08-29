@@ -44,6 +44,8 @@
 		678D5B9526DBA7B600EBEA62 /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D5B9426DBA7B600EBEA62 /* CLLocationCoordinate2D+Extension.swift */; };
 		678D5B9726DBA7F700EBEA62 /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D5B9626DBA7F700EBEA62 /* MKMapView+Extension.swift */; };
 		678D5B9C26DBE6B000EBEA62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 678D5B9B26DBE6B000EBEA62 /* README.md */; };
+		678D5BA026DBF2F700EBEA62 /* MainViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D5B9F26DBF2F700EBEA62 /* MainViewModelTest.swift */; };
+		678D5BA226DBF34A00EBEA62 /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D5BA126DBF34A00EBEA62 /* APIServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		678D5B9426DBA7B600EBEA62 /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
 		678D5B9626DBA7F700EBEA62 /* MKMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
 		678D5B9B26DBE6B000EBEA62 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		678D5B9F26DBF2F700EBEA62 /* MainViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTest.swift; sourceTree = "<group>"; };
+		678D5BA126DBF34A00EBEA62 /* APIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 				6735FAA526DB88B2008FB278 /* RemoveRuleEndpointTest.swift */,
 				6735FAA726DB898E008FB278 /* AddRuleEndpointTest.swift */,
 				6735FAA926DB8A70008FB278 /* GeoModelTest.swift */,
+				678D5B9F26DBF2F700EBEA62 /* MainViewModelTest.swift */,
+				678D5BA126DBF34A00EBEA62 /* APIServiceMock.swift */,
 			);
 			path = RealTimeTweetsOnMapUIKitTests;
 			sourceTree = "<group>";
@@ -373,8 +379,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6735FA9B26DB82D6008FB278 /* ExampleGetEndpoint.swift in Sources */,
+				678D5BA026DBF2F700EBEA62 /* MainViewModelTest.swift in Sources */,
 				6735FA9C26DB82D6008FB278 /* ExampleModel.swift in Sources */,
 				6735FA9626DB82D6008FB278 /* ExampleDeleteEndpoint.swift in Sources */,
+				678D5BA226DBF34A00EBEA62 /* APIServiceMock.swift in Sources */,
 				6735FA9926DB82D6008FB278 /* ExamplePostEndpoint.swift in Sources */,
 				6735FA9E26DB82F4008FB278 /* NetworkPublisherTests.swift in Sources */,
 				6735FAAA26DB8A70008FB278 /* GeoModelTest.swift in Sources */,

@@ -8,7 +8,12 @@
 import CoreLocation
 import Foundation
 
-class APIService: NSObject {
+protocol APIServiceProtocol {
+    var returnNewLocation: ((Result<CLLocation, Error>) -> Void) { get set }
+    func fecthTweetsWith(_ rule: String)
+}
+
+class APIService: NSObject, APIServiceProtocol {
 
     var returnNewLocation: ((Result<CLLocation, Error>) -> Void) = { _ in  }
 
