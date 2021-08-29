@@ -17,9 +17,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     
     @IBOutlet weak var mapView: MKMapView!
-    
+    private var textFromSearchBar = ""
     @IBAction func applyRule(_ sender: UIButton) {
-        
+        viewModel.searchAction(textFromSearchBar)
     }
     
     override func viewDidLoad() {
@@ -64,6 +64,7 @@ extension MainViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if let text = textField.text {
             searchButton.isEnabled = text == ""  ? false: true
+            textFromSearchBar = text
         }
     }
     

@@ -10,11 +10,22 @@ import CoreLocation.CLLocation
 
 class MainViewModel: NSObject {
     
-    private(set) var rule = ""
-    private(set) var lifeTime = 5
+    var rule = ""
+    var lifeTime = 5
     var location: CLLocation?
     var lifeTimeOptions = [5, 10, 15]
     
+    var updateMap: (() -> ()) = {}
     
+    func searchAction(_ newRule: String) {
+        self.rule = newRule
+    }
     
+}
+
+extension MainViewModel: APIServiceDelegate {
+    func reciveLocation(_ location: CLLocation) {
+        self.location = location
+        updateMap()
+    }
 }
