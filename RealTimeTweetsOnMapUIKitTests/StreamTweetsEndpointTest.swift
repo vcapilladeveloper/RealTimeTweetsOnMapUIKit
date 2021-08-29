@@ -24,7 +24,11 @@ class StreamTweetsEndpointTest: XCTestCase {
     }
     
     func test_geo_endpoint_full_constructor() {
-        sut = StreamTweetsEndpoint(baseURLString: "", path: "/2/tweets/search/stream?tweet.fields=geo", method: .post, paramEncoding: .JSONEncoding, showDebugInfo: true)
+        sut = StreamTweetsEndpoint(baseURLString: "",
+                                   path: "/2/tweets/search/stream?tweet.fields=geo",
+                                   method: .post,
+                                   paramEncoding: .JSONEncoding,
+                                   showDebugInfo: true)
         XCTAssertEqual(sut.baseURLString, "")
         XCTAssertEqual(sut.path, "/2/tweets/search/stream?tweet.fields=geo")
         XCTAssertEqual(sut.method, .post)

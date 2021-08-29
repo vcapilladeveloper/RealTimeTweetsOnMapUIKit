@@ -9,13 +9,13 @@ import CoreLocation
 import Foundation
 
 class APIService: NSObject {
-    
-    var returnNewLocation: ((Result<CLLocation, Error>)->()) = { _ in  }
-    
-    //MARK: - Request Data
-    
+
+    var returnNewLocation: ((Result<CLLocation, Error>) -> Void) = { _ in  }
+
+    // MARK: - Request Data
+
     func fecthTweetsWith(_ rule: String) {
-        
+
         RemoveRuleEndpoint().loadVoidData { [weak self] result in
             switch result {
             case .success():
@@ -25,7 +25,7 @@ class APIService: NSObject {
             }
         }
     }
-    
+
     private func addRule(_ rule: String) {
         AddRuleEndpoint(rule).loadVoidData { [weak self] result in
             switch result {
@@ -36,11 +36,11 @@ class APIService: NSObject {
             }
         }
     }
-    
+
     func streamTweets() {
         StreamTweetsEndpoint().listenData(self as URLSessionDataDelegate)
     }
-    
+
     private func getCoordinates(_ geo: TweetModel.Geo) {
         GeoEndpoint(geo.placeId ?? "").loadData { [weak self] result in
             switch result {
@@ -51,15 +51,15 @@ class APIService: NSObject {
             }
         }
     }
-    
-    //MARK: - Helpers
-    
+
+    // MARK: - Helpers
+
     private func separateDataIntoLinesIfPlaceId(_ data: Data) -> [String] {
         let str = String(decoding: data, as: UTF8.self)
         let lines = str.components(separatedBy: "\n")
-        return lines.filter{$0.contains("place_id")}
+        return lines.filter { $0.contains("place_id") }
     }
-    
+
     private func decodeData(_ item: String) -> TweetModel? {
         do {
             return try JSONDecoder().decode(TweetModel.self, from: item.data(using: .utf8) ?? Data())
@@ -67,12 +67,12 @@ class APIService: NSObject {
             return nil
         }
     }
-    
+
 }
 
-//MARK: - Methods for apply URLSessionDataDelegate
+    // MARK: - Methods for apply URLSessionDataDelegate
 extension APIService: URLSessionDataDelegate {
-    
+
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         separateDataIntoLinesIfPlaceId(data).forEach { item in
             if let tweet = decodeData(item) {
@@ -82,8 +82,10 @@ extension APIService: URLSessionDataDelegate {
             }
         }
     }
-    
-    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+
+    func urlSession(_ session: URLSession,
+                    didReceive challenge: URLAuthenticationChallenge,
+                    completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         guard challenge.previousFailureCount == 0 else {
             challenge.sender?.cancel(challenge)
             completionHandler(.cancelAuthenticationChallenge, nil)
@@ -92,11 +94,11 @@ extension APIService: URLSessionDataDelegate {
         let allowAllCredential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
         completionHandler(.useCredential, allowAllCredential)
     }
-    
+
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         if let error = error {
             returnNewLocation(.failure(error))
         }
     }
-    
+
 }

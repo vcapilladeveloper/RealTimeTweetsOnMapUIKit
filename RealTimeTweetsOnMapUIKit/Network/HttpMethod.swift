@@ -9,7 +9,7 @@ import Foundation
 
 /// Supported HTTP methods
 public enum HttpMethod: String {
-    
+
     case connect = "CONNECT"
     case delete = "DELETE"
     case get = "GET"
@@ -19,5 +19,5 @@ public enum HttpMethod: String {
     case post = "POST"
     case put = "PUT"
     case trace = "TRACE"
-    
+
 }

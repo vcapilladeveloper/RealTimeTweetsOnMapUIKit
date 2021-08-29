@@ -11,43 +11,42 @@ import MapKit
 class MainViewController: UIViewController {
 
     var viewModel = MainViewModel()
-    
+
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var searchButton: UIButton!
-    
+
     @IBOutlet weak var mapView: MKMapView!
     private var textFromSearchBar = ""
     @IBAction func applyRule(_ sender: UIButton) {
         viewModel.searchAction(textFromSearchBar)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         searchBar.delegate = self
         searchButton.isEnabled = false
-        
+
         viewModel.updateMap = { [weak self] in
             DispatchQueue.main.async {
                 self?.updateView()
             }
         }
-        
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpView()
         updateView()
     }
-    
+
     func setUpView() {
         for (index, time) in viewModel.lifeTimeOptions.enumerated() {
             segmentedControl.setTitle("\(time)", forSegmentAt: index)
         }
     }
-    
+
     func updateView() {
         if let location = viewModel.location {
             let annotation = MKPointAnnotation()
@@ -55,7 +54,7 @@ class MainViewController: UIViewController {
             addAnnotationWithLifeTime(annotation)
         }
     }
-    
+
     func addAnnotationWithLifeTime(_ annotation: MKPointAnnotation) {
         mapView.addAnnotation(annotation)
         mapView.centerToLocation(annotation.coordinate.convertToLocation())
@@ -63,7 +62,7 @@ class MainViewController: UIViewController {
             self?.mapView.removeAnnotation(annotation)
         }
     }
-    
+
 }
 
 extension MainViewController: UITextFieldDelegate {
@@ -74,5 +73,5 @@ extension MainViewController: UITextFieldDelegate {
             textFromSearchBar = text
         }
     }
-    
+
 }

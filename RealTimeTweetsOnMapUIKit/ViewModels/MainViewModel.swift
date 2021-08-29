@@ -17,12 +17,12 @@ class MainViewModel: NSObject {
         }
     }
     var apiService = APIService()
-    
+
     var lifeTimeOptions = [5, 10, 15]
-   
-    var updateMap: (() -> ()) = { }
-    var errorState: ((String)->()) = { _ in }
-    
+
+    var updateMap: (() -> Void) = { }
+    var errorState: ((String) -> Void) = { _ in }
+
     override init() {
         super.init()
         apiService.returnNewLocation = { [weak self] result in
@@ -34,10 +34,9 @@ class MainViewModel: NSObject {
             }
         }
     }
-    
+
     func searchAction(_ newRule: String) {
         apiService.fecthTweetsWith(newRule)
     }
-    
-}
 
+}
