@@ -14,18 +14,35 @@
 		6735FA4326DB7D05008FB278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6735FA4226DB7D05008FB278 /* Assets.xcassets */; };
 		6735FA4626DB7D05008FB278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6735FA4426DB7D05008FB278 /* LaunchScreen.storyboard */; };
 		6735FA5126DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA5026DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests.swift */; };
-		6735FA5C26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA5B26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests.swift */; };
+		6735FA6B26DB7EDB008FB278 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA6A26DB7EDB008FB278 /* HttpMethod.swift */; };
+		6735FA6D26DB7F4B008FB278 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA6C26DB7F4B008FB278 /* NetworkManager.swift */; };
+		6735FA6F26DB7F6E008FB278 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA6E26DB7F6E008FB278 /* Endpoint.swift */; };
+		6735FA7126DB7FA9008FB278 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA7026DB7FA9008FB278 /* ParameterEncoding.swift */; };
+		6735FA7326DB7FCD008FB278 /* HttpHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA7226DB7FCD008FB278 /* HttpHeaders.swift */; };
+		6735FA7926DB80EB008FB278 /* StreamTweetsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA7526DB80EB008FB278 /* StreamTweetsEndpoint.swift */; };
+		6735FA7A26DB80EB008FB278 /* RemoveRuleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA7626DB80EB008FB278 /* RemoveRuleEndpoint.swift */; };
+		6735FA7B26DB80EB008FB278 /* GeoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA7726DB80EB008FB278 /* GeoEndpoint.swift */; };
+		6735FA7C26DB80EB008FB278 /* AddRuleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA7826DB80EB008FB278 /* AddRuleEndpoint.swift */; };
+		6735FA7F26DB8211008FB278 /* ConfigUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA7E26DB8211008FB278 /* ConfigUtils.swift */; };
+		6735FA8C26DB8266008FB278 /* GeoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA8126DB8266008FB278 /* GeoModel.swift */; };
+		6735FA8D26DB8266008FB278 /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA8B26DB8266008FB278 /* TweetModel.swift */; };
+		6735FA9626DB82D6008FB278 /* ExampleDeleteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA8F26DB82D5008FB278 /* ExampleDeleteEndpoint.swift */; };
+		6735FA9726DB82D6008FB278 /* ExamplePutEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA9026DB82D5008FB278 /* ExamplePutEndpoint.swift */; };
+		6735FA9826DB82D6008FB278 /* ExamplePatchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA9126DB82D5008FB278 /* ExamplePatchEndpoint.swift */; };
+		6735FA9926DB82D6008FB278 /* ExamplePostEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA9226DB82D5008FB278 /* ExamplePostEndpoint.swift */; };
+		6735FA9B26DB82D6008FB278 /* ExampleGetEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA9426DB82D6008FB278 /* ExampleGetEndpoint.swift */; };
+		6735FA9C26DB82D6008FB278 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA9526DB82D6008FB278 /* ExampleModel.swift */; };
+		6735FA9E26DB82F4008FB278 /* NetworkPublisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA9D26DB82F4008FB278 /* NetworkPublisherTests.swift */; };
+		6735FAA026DB82F9008FB278 /* ConfigUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FA9F26DB82F9008FB278 /* ConfigUtilsTest.swift */; };
+		6735FAA226DB84C2008FB278 /* GeoEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FAA126DB84C2008FB278 /* GeoEndpointTest.swift */; };
+		6735FAA426DB8818008FB278 /* StreamTweetsEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FAA326DB8818008FB278 /* StreamTweetsEndpointTest.swift */; };
+		6735FAA626DB88B2008FB278 /* RemoveRuleEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FAA526DB88B2008FB278 /* RemoveRuleEndpointTest.swift */; };
+		6735FAA826DB898E008FB278 /* AddRuleEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FAA726DB898E008FB278 /* AddRuleEndpointTest.swift */; };
+		6735FAAA26DB8A70008FB278 /* GeoModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735FAA926DB8A70008FB278 /* GeoModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		6735FA4D26DB7D05008FB278 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6735FA2E26DB7D03008FB278 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6735FA3526DB7D03008FB278;
-			remoteInfo = RealTimeTweetsOnMapUIKit;
-		};
-		6735FA5826DB7D05008FB278 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6735FA2E26DB7D03008FB278 /* Project object */;
 			proxyType = 1;
@@ -46,9 +63,31 @@
 		6735FA4C26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealTimeTweetsOnMapUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6735FA5026DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTweetsOnMapUIKitTests.swift; sourceTree = "<group>"; };
 		6735FA5226DB7D05008FB278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6735FA5726DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealTimeTweetsOnMapUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6735FA5B26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeTweetsOnMapUIKitUITests.swift; sourceTree = "<group>"; };
-		6735FA5D26DB7D05008FB278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6735FA6A26DB7EDB008FB278 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		6735FA6C26DB7F4B008FB278 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6735FA6E26DB7F6E008FB278 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		6735FA7026DB7FA9008FB278 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		6735FA7226DB7FCD008FB278 /* HttpHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeaders.swift; sourceTree = "<group>"; };
+		6735FA7526DB80EB008FB278 /* StreamTweetsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamTweetsEndpoint.swift; sourceTree = "<group>"; };
+		6735FA7626DB80EB008FB278 /* RemoveRuleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveRuleEndpoint.swift; sourceTree = "<group>"; };
+		6735FA7726DB80EB008FB278 /* GeoEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoEndpoint.swift; sourceTree = "<group>"; };
+		6735FA7826DB80EB008FB278 /* AddRuleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRuleEndpoint.swift; sourceTree = "<group>"; };
+		6735FA7E26DB8211008FB278 /* ConfigUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigUtils.swift; sourceTree = "<group>"; };
+		6735FA8126DB8266008FB278 /* GeoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoModel.swift; sourceTree = "<group>"; };
+		6735FA8B26DB8266008FB278 /* TweetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
+		6735FA8F26DB82D5008FB278 /* ExampleDeleteEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleDeleteEndpoint.swift; sourceTree = "<group>"; };
+		6735FA9026DB82D5008FB278 /* ExamplePutEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePutEndpoint.swift; sourceTree = "<group>"; };
+		6735FA9126DB82D5008FB278 /* ExamplePatchEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePatchEndpoint.swift; sourceTree = "<group>"; };
+		6735FA9226DB82D5008FB278 /* ExamplePostEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePostEndpoint.swift; sourceTree = "<group>"; };
+		6735FA9426DB82D6008FB278 /* ExampleGetEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleGetEndpoint.swift; sourceTree = "<group>"; };
+		6735FA9526DB82D6008FB278 /* ExampleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
+		6735FA9D26DB82F4008FB278 /* NetworkPublisherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPublisherTests.swift; sourceTree = "<group>"; };
+		6735FA9F26DB82F9008FB278 /* ConfigUtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigUtilsTest.swift; sourceTree = "<group>"; };
+		6735FAA126DB84C2008FB278 /* GeoEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoEndpointTest.swift; sourceTree = "<group>"; };
+		6735FAA326DB8818008FB278 /* StreamTweetsEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamTweetsEndpointTest.swift; sourceTree = "<group>"; };
+		6735FAA526DB88B2008FB278 /* RemoveRuleEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRuleEndpointTest.swift; sourceTree = "<group>"; };
+		6735FAA726DB898E008FB278 /* AddRuleEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRuleEndpointTest.swift; sourceTree = "<group>"; };
+		6735FAA926DB8A70008FB278 /* GeoModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +105,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6735FA5426DB7D05008FB278 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +113,6 @@
 			children = (
 				6735FA3826DB7D03008FB278 /* RealTimeTweetsOnMapUIKit */,
 				6735FA4F26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests */,
-				6735FA5A26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests */,
 				6735FA3726DB7D03008FB278 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +122,6 @@
 			children = (
 				6735FA3626DB7D03008FB278 /* RealTimeTweetsOnMapUIKit.app */,
 				6735FA4C26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests.xctest */,
-				6735FA5726DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +129,8 @@
 		6735FA3826DB7D03008FB278 /* RealTimeTweetsOnMapUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				6735FA8026DB825A008FB278 /* Models */,
+				6735FA6926DB7EC4008FB278 /* Network */,
 				6735FA3926DB7D03008FB278 /* AppDelegate.swift */,
 				6735FA3B26DB7D03008FB278 /* SceneDelegate.swift */,
 				6735FA3D26DB7D03008FB278 /* ViewController.swift */,
@@ -113,19 +145,73 @@
 		6735FA4F26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				6735FA9F26DB82F9008FB278 /* ConfigUtilsTest.swift */,
+				6735FA9D26DB82F4008FB278 /* NetworkPublisherTests.swift */,
+				6735FA8E26DB82C6008FB278 /* Models */,
 				6735FA5026DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests.swift */,
 				6735FA5226DB7D05008FB278 /* Info.plist */,
+				6735FAA126DB84C2008FB278 /* GeoEndpointTest.swift */,
+				6735FAA326DB8818008FB278 /* StreamTweetsEndpointTest.swift */,
+				6735FAA526DB88B2008FB278 /* RemoveRuleEndpointTest.swift */,
+				6735FAA726DB898E008FB278 /* AddRuleEndpointTest.swift */,
+				6735FAA926DB8A70008FB278 /* GeoModelTest.swift */,
 			);
 			path = RealTimeTweetsOnMapUIKitTests;
 			sourceTree = "<group>";
 		};
-		6735FA5A26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests */ = {
+		6735FA6926DB7EC4008FB278 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				6735FA5B26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests.swift */,
-				6735FA5D26DB7D05008FB278 /* Info.plist */,
+				6735FA7D26DB8206008FB278 /* Utils */,
+				6735FA7426DB80DB008FB278 /* Endpoints */,
+				6735FA6A26DB7EDB008FB278 /* HttpMethod.swift */,
+				6735FA6C26DB7F4B008FB278 /* NetworkManager.swift */,
+				6735FA6E26DB7F6E008FB278 /* Endpoint.swift */,
+				6735FA7026DB7FA9008FB278 /* ParameterEncoding.swift */,
+				6735FA7226DB7FCD008FB278 /* HttpHeaders.swift */,
 			);
-			path = RealTimeTweetsOnMapUIKitUITests;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6735FA7426DB80DB008FB278 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				6735FA7826DB80EB008FB278 /* AddRuleEndpoint.swift */,
+				6735FA7726DB80EB008FB278 /* GeoEndpoint.swift */,
+				6735FA7626DB80EB008FB278 /* RemoveRuleEndpoint.swift */,
+				6735FA7526DB80EB008FB278 /* StreamTweetsEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		6735FA7D26DB8206008FB278 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6735FA7E26DB8211008FB278 /* ConfigUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6735FA8026DB825A008FB278 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6735FA8126DB8266008FB278 /* GeoModel.swift */,
+				6735FA8B26DB8266008FB278 /* TweetModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6735FA8E26DB82C6008FB278 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6735FA8F26DB82D5008FB278 /* ExampleDeleteEndpoint.swift */,
+				6735FA9426DB82D6008FB278 /* ExampleGetEndpoint.swift */,
+				6735FA9526DB82D6008FB278 /* ExampleModel.swift */,
+				6735FA9126DB82D5008FB278 /* ExamplePatchEndpoint.swift */,
+				6735FA9226DB82D5008FB278 /* ExamplePostEndpoint.swift */,
+				6735FA9026DB82D5008FB278 /* ExamplePutEndpoint.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,24 +252,6 @@
 			productReference = 6735FA4C26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6735FA5626DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6735FA6626DB7D05008FB278 /* Build configuration list for PBXNativeTarget "RealTimeTweetsOnMapUIKitUITests" */;
-			buildPhases = (
-				6735FA5326DB7D05008FB278 /* Sources */,
-				6735FA5426DB7D05008FB278 /* Frameworks */,
-				6735FA5526DB7D05008FB278 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6735FA5926DB7D05008FB278 /* PBXTargetDependency */,
-			);
-			name = RealTimeTweetsOnMapUIKitUITests;
-			productName = RealTimeTweetsOnMapUIKitUITests;
-			productReference = 6735FA5726DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +265,6 @@
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					6735FA4B26DB7D05008FB278 = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = 6735FA3526DB7D03008FB278;
-					};
-					6735FA5626DB7D05008FB278 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 6735FA3526DB7D03008FB278;
 					};
@@ -221,7 +285,6 @@
 			targets = (
 				6735FA3526DB7D03008FB278 /* RealTimeTweetsOnMapUIKit */,
 				6735FA4B26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests */,
-				6735FA5626DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,13 +307,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6735FA5526DB7D05008FB278 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,8 +314,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6735FA7A26DB80EB008FB278 /* RemoveRuleEndpoint.swift in Sources */,
+				6735FA7326DB7FCD008FB278 /* HttpHeaders.swift in Sources */,
+				6735FA7C26DB80EB008FB278 /* AddRuleEndpoint.swift in Sources */,
+				6735FA7F26DB8211008FB278 /* ConfigUtils.swift in Sources */,
+				6735FA7126DB7FA9008FB278 /* ParameterEncoding.swift in Sources */,
+				6735FA6B26DB7EDB008FB278 /* HttpMethod.swift in Sources */,
+				6735FA8D26DB8266008FB278 /* TweetModel.swift in Sources */,
+				6735FA7B26DB80EB008FB278 /* GeoEndpoint.swift in Sources */,
+				6735FA8C26DB8266008FB278 /* GeoModel.swift in Sources */,
+				6735FA7926DB80EB008FB278 /* StreamTweetsEndpoint.swift in Sources */,
 				6735FA3E26DB7D03008FB278 /* ViewController.swift in Sources */,
+				6735FA6D26DB7F4B008FB278 /* NetworkManager.swift in Sources */,
 				6735FA3A26DB7D03008FB278 /* AppDelegate.swift in Sources */,
+				6735FA6F26DB7F6E008FB278 /* Endpoint.swift in Sources */,
 				6735FA3C26DB7D03008FB278 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,15 +336,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6735FA9B26DB82D6008FB278 /* ExampleGetEndpoint.swift in Sources */,
+				6735FA9C26DB82D6008FB278 /* ExampleModel.swift in Sources */,
+				6735FA9626DB82D6008FB278 /* ExampleDeleteEndpoint.swift in Sources */,
+				6735FA9926DB82D6008FB278 /* ExamplePostEndpoint.swift in Sources */,
+				6735FA9E26DB82F4008FB278 /* NetworkPublisherTests.swift in Sources */,
+				6735FAAA26DB8A70008FB278 /* GeoModelTest.swift in Sources */,
+				6735FA9726DB82D6008FB278 /* ExamplePutEndpoint.swift in Sources */,
+				6735FAA626DB88B2008FB278 /* RemoveRuleEndpointTest.swift in Sources */,
+				6735FA9826DB82D6008FB278 /* ExamplePatchEndpoint.swift in Sources */,
+				6735FAA226DB84C2008FB278 /* GeoEndpointTest.swift in Sources */,
+				6735FAA826DB898E008FB278 /* AddRuleEndpointTest.swift in Sources */,
+				6735FAA426DB8818008FB278 /* StreamTweetsEndpointTest.swift in Sources */,
 				6735FA5126DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6735FA5326DB7D05008FB278 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6735FA5C26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitUITests.swift in Sources */,
+				6735FAA026DB82F9008FB278 /* ConfigUtilsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +360,6 @@
 			isa = PBXTargetDependency;
 			target = 6735FA3526DB7D03008FB278 /* RealTimeTweetsOnMapUIKit */;
 			targetProxy = 6735FA4D26DB7D05008FB278 /* PBXContainerItemProxy */;
-		};
-		6735FA5926DB7D05008FB278 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6735FA3526DB7D03008FB278 /* RealTimeTweetsOnMapUIKit */;
-			targetProxy = 6735FA5826DB7D05008FB278 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -436,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://api.twitter.com";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7AZRND92Z;
 				INFOPLIST_FILE = RealTimeTweetsOnMapUIKit/Info.plist;
@@ -447,6 +516,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TWITTER_BEARER = "AAAAAAAAAAAAAAAAAAAAACtNTAEAAAAApS0h3G6iIsd1yn8%2BIXL%2BG2cBBVY%3Df3vK7V1TevgtLUOyLkpSvcGfecb4800k3j8xhCM9C3vQ5Q9g2D";
 			};
 			name = Debug;
 		};
@@ -455,6 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://api.twitter.com";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7AZRND92Z;
 				INFOPLIST_FILE = RealTimeTweetsOnMapUIKit/Info.plist;
@@ -466,6 +537,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TWITTER_BEARER = "AAAAAAAAAAAAAAAAAAAAACtNTAEAAAAApS0h3G6iIsd1yn8%2BIXL%2BG2cBBVY%3Df3vK7V1TevgtLUOyLkpSvcGfecb4800k3j8xhCM9C3vQ5Q9g2D";
 			};
 			name = Release;
 		};
@@ -513,46 +585,6 @@
 			};
 			name = Release;
 		};
-		6735FA6726DB7D05008FB278 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N7AZRND92Z;
-				INFOPLIST_FILE = RealTimeTweetsOnMapUIKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladeveloper.RealTimeTweetsOnMapUIKitUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RealTimeTweetsOnMapUIKit;
-			};
-			name = Debug;
-		};
-		6735FA6826DB7D05008FB278 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N7AZRND92Z;
-				INFOPLIST_FILE = RealTimeTweetsOnMapUIKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladeveloper.RealTimeTweetsOnMapUIKitUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RealTimeTweetsOnMapUIKit;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,15 +611,6 @@
 			buildConfigurations = (
 				6735FA6426DB7D05008FB278 /* Debug */,
 				6735FA6526DB7D05008FB278 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6735FA6626DB7D05008FB278 /* Build configuration list for PBXNativeTarget "RealTimeTweetsOnMapUIKitUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6735FA6726DB7D05008FB278 /* Debug */,
-				6735FA6826DB7D05008FB278 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
