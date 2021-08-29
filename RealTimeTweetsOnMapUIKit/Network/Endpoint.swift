@@ -34,6 +34,10 @@ public extension Endpoint {
         baseURLString + path
     }
     
+    func loadVoidData(_ completion: @escaping (Result<Void, Error>) -> Void) {
+        NetworkManager.requestData(self, completion: completion)
+    }
+    
     func loadData(_ completion: @escaping (NetworkResult<T>) -> Void) where T: Codable {
         NetworkManager.requestData(self, completion: completion)
     }

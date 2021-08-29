@@ -57,6 +57,42 @@ open class NetworkManager {
         })
         do {dataTask?.resume()}
     }
+    
+    public static func requestData<E: Endpoint>(_ endpoint: E, completion: @escaping (Result<Void, Error>) -> Void)  {
+        
+        guard let url = URL(string: endpoint.getStringURL()) else {
+            fatalError("Could not create URL from the given URL components.")
+        }
+        
+        dataTask?.cancel()
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = endpoint.method.rawValue
+        
+        // TODO: Make the serialization inside the Endpoint Extension
+        if let params = endpoint.parameters {
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+                urlRequest.httpBody = jsonData
+            } catch (let formatError) {
+                completion(.failure(formatError))
+            }
+        }
+        
+        if let header = endpoint.headers {
+            urlRequest.allHTTPHeaderFields = header.dictionary
+        }
+        
+        dataTask = defaultSession.dataTask(with: urlRequest, completionHandler: { data, response, error in
+            if let error = error  {
+                completion(.failure(error))
+            }
+            if data != nil {
+                //TODO: Make the decoder outside request.
+                completion(.success(()))
+            }
+        })
+        do {dataTask?.resume()}
+    }
 
     public static func listenData<E: Endpoint>(_ endpoint: E, delegate: URLSessionDelegate)  {
         guard let url = URL(string: endpoint.getStringURL()) else {

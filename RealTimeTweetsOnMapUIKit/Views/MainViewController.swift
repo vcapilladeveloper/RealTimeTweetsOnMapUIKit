@@ -27,7 +27,13 @@ class MainViewController: UIViewController {
         
         searchBar.delegate = self
         searchButton.isEnabled = false
-       
+        
+        viewModel.updateMap = { [weak self] in
+            DispatchQueue.main.async {
+                self?.updateView()
+            }
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,10 +49,11 @@ class MainViewController: UIViewController {
     }
     
     func updateView() {
-        let london = MKPointAnnotation()
-        london.title = "London"
-        london.coordinate = CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)
-       addAnnotationWithLifeTime(london)
+        if let location = viewModel.location {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location.convertToLocationCoordinate()
+            addAnnotationWithLifeTime(annotation)
+        }
     }
     
     func addAnnotationWithLifeTime(_ annotation: MKPointAnnotation) {

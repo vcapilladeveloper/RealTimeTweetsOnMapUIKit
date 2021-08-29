@@ -11,12 +11,13 @@ import MapKit
 extension MKMapView {
   func centerToLocation(
     _ location: CLLocation,
-    regionRadius: CLLocationDistance = 100
+    regionRadius: CLLocationDistance = 1000
   ) {
-    let coordinateRegion = MKCoordinateRegion(
+    var coordinateRegion = MKCoordinateRegion(
       center: location.coordinate,
       latitudinalMeters: regionRadius,
       longitudinalMeters: regionRadius)
+    coordinateRegion.span = MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25)
     setRegion(coordinateRegion, animated: true)
   }
 }
