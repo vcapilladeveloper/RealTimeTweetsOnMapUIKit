@@ -43,6 +43,7 @@
 		678D5B9326DBA51300EBEA62 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D5B9226DBA51300EBEA62 /* APIService.swift */; };
 		678D5B9526DBA7B600EBEA62 /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D5B9426DBA7B600EBEA62 /* CLLocationCoordinate2D+Extension.swift */; };
 		678D5B9726DBA7F700EBEA62 /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D5B9626DBA7F700EBEA62 /* MKMapView+Extension.swift */; };
+		678D5B9C26DBE6B000EBEA62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 678D5B9B26DBE6B000EBEA62 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		678D5B9226DBA51300EBEA62 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		678D5B9426DBA7B600EBEA62 /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
 		678D5B9626DBA7F700EBEA62 /* MKMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
+		678D5B9B26DBE6B000EBEA62 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		6735FA2D26DB7D03008FB278 = {
 			isa = PBXGroup;
 			children = (
+				678D5B9B26DBE6B000EBEA62 /* README.md */,
 				6735FA3826DB7D03008FB278 /* RealTimeTweetsOnMapUIKit */,
 				6735FA4F26DB7D05008FB278 /* RealTimeTweetsOnMapUIKitTests */,
 				6735FA3726DB7D03008FB278 /* Products */,
@@ -324,6 +327,7 @@
 			files = (
 				6735FA4626DB7D05008FB278 /* LaunchScreen.storyboard in Resources */,
 				6735FA4326DB7D05008FB278 /* Assets.xcassets in Resources */,
+				678D5B9C26DBE6B000EBEA62 /* README.md in Resources */,
 				6735FA4126DB7D03008FB278 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
