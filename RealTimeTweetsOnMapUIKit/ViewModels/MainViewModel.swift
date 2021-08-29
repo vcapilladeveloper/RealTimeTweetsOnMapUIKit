@@ -15,7 +15,8 @@ class MainViewModel: NSObject {
     var location: CLLocation?
     var lifeTimeOptions = [5, 10, 15]
     
-    var updateMap: (() -> ()) = {}
+    var updateMap: (() -> ()) = { }
+    var errorState: (()->()) = { }
     
     func searchAction(_ newRule: String) {
         self.rule = newRule

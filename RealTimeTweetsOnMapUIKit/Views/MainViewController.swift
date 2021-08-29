@@ -69,22 +69,3 @@ extension MainViewController: UITextFieldDelegate {
     }
     
 }
-
-private extension CLLocationCoordinate2D {
-    func convertToLocation() -> CLLocation {
-        return CLLocation(latitude: self.latitude, longitude: self.longitude)
-    }
-}
-
-private extension MKMapView {
-  func centerToLocation(
-    _ location: CLLocation,
-    regionRadius: CLLocationDistance = 100
-  ) {
-    let coordinateRegion = MKCoordinateRegion(
-      center: location.coordinate,
-      latitudinalMeters: regionRadius,
-      longitudinalMeters: regionRadius)
-    setRegion(coordinateRegion, animated: true)
-  }
-}
